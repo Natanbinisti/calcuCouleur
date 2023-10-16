@@ -138,7 +138,7 @@ function changeColor(){
 
     console.log(caracteresPossibles[nombreEntierAuHasardEntreZeroEtSeize])
 
-
+                                                 
     //
     // on veut obtenir une variable color
     //qui contient une couleur au hasard
