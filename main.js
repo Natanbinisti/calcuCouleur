@@ -129,10 +129,17 @@ function changeColor(){
     // une couleur d'exemple : let couleur = '#4JFO50'
     let color = ""
     let caracteresPossibles = "abcdedf1234567890";
+    let nombreDeCaracteresTotal = caracteresPossibles.length
+
+    let nombreDecimalAuHasardEntreZeroEtUn = Math.random()
+ let nombreDecimalAuHasardEntreZeroEtSeize = nombreDecimalAuHasardEntreZeroEtUn*nombreDeCaracteresTotal
+  let nombreEntierAuHasardEntreZeroEtSeize = Math.floor(nombreDecimalAuHasardEntreZeroEtSeize)
+    console.log(nombreEntierAuHasardEntreZeroEtSeize)
+
+    console.log(caracteresPossibles[nombreEntierAuHasardEntreZeroEtSeize])
+
 
     //
-
-
     // on veut obtenir une variable color
     //qui contient une couleur au hasard
     // recuperer mon element cercle dans une constante
