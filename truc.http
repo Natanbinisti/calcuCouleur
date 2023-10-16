@@ -1,0 +1,12 @@
+GET http://api.chucknorris.io/jokes/random
+Accept: application/json
+
+###
+POST http://localhost:80/api/item
+Content-Type: application/json
+
+{
+  "username": "jean-claude"
+}
+
+###
