@@ -15,6 +15,7 @@ const boutonMoins = document.querySelector('.moins')
 const boutonX = document.querySelector('.multiplie')
 const boutonDivision = document.querySelector('.divise')
 const boutonPoint = document.querySelector('.point')
+const boutonEffacer = document.querySelector('.effacer')
 
 
 boutonUn.addEventListener('click', ()=>{
@@ -41,14 +42,29 @@ boutonPlus.addEventListener('click', ()=>{addToDisplay(boutonPlus.innerHTML)} )
 boutonMoins.addEventListener('click', ()=>{addToDisplay(boutonMoins.innerHTML)} )
 boutonX.addEventListener('click', ()=>{addToDisplay(boutonX.innerHTML)} )
 boutonDivision.addEventListener('click', ()=>{addToDisplay(boutonDivision.innerHTML)} )
+boutonEffacer.addEventListener('click' , ()=>{
+    effacer()
+})
+
+
 
 // implementer les regles concernant les symboles
 
 function addToDisplay(valeurDuBouton)
     {
         let valeur = valeurDuBouton
+            //  operation = "1+2+5"
 
+      //  let lastChar = operation[operation.length-1]
+        let lastChar = operation.slice(-1)
+        let symbols = "+-/*."
 
+      let lastCharIsSymbol =  symbols.includes(lastChar)
+      let valeurIsSymbol =  symbols.includes(valeur)
+                                 //  AND
+        if(lastCharIsSymbol && valeurIsSymbol){
+                   return
+        }
 
         if(operation == 0){
             operation = valeur
@@ -65,6 +81,12 @@ function addToDisplay(valeurDuBouton)
     }
 
     function effacer(){
+        ecran.value=0
+        operation = '0'
+    }
+
+    function calcul(){
+
 
     }
 
