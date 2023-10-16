@@ -28,17 +28,46 @@ boutonDeux.addEventListener('click', ()=>{
     addToDisplay(boutonDeux.innerHTML)
 
 } )
+boutonTrois.addEventListener('click', ()=>{addToDisplay(boutonTrois.innerHTML)} )
+boutonQuatre.addEventListener('click', ()=>{addToDisplay(boutonQuatre.innerHTML)} )
+boutonCinq.addEventListener('click', ()=>{addToDisplay(boutonCinq.innerHTML)} )
+boutonSix.addEventListener('click', ()=>{addToDisplay(boutonSix.innerHTML)} )
+boutonSept.addEventListener('click', ()=>{addToDisplay(boutonSept.innerHTML)} )
+boutonHuit.addEventListener('click', ()=>{addToDisplay(boutonHuit.innerHTML)} )
+boutonNeuf.addEventListener('click', ()=>{addToDisplay(boutonNeuf.innerHTML)} )
+boutonZero.addEventListener('click', ()=>{addToDisplay(boutonZero.innerHTML)} )
+boutonPoint.addEventListener('click', ()=>{addToDisplay(boutonPoint.innerHTML)} )
+boutonPlus.addEventListener('click', ()=>{addToDisplay(boutonPlus.innerHTML)} )
+boutonMoins.addEventListener('click', ()=>{addToDisplay(boutonMoins.innerHTML)} )
+boutonX.addEventListener('click', ()=>{addToDisplay(boutonX.innerHTML)} )
+boutonDivision.addEventListener('click', ()=>{addToDisplay(boutonDivision.innerHTML)} )
 
+// implementer les regles concernant les symboles
 
 function addToDisplay(valeurDuBouton)
     {
         let valeur = valeurDuBouton
 
-        operation = operation + valeur
+
+
+        if(operation == 0){
+            operation = valeur
+        }else{
+            operation = operation + valeur
+        }
+
+
+
+
         console.log("operation :" +operation)
 
         ecran.value = operation
     }
+
+    function effacer(){
+
+    }
+
 
 let bolognaise = 'à la sauce bolognaise'
 
@@ -47,7 +76,7 @@ function faisDesPates(sauce){
     console.log('voici un plat de pates ' + sauce )
 }
 
-faisDesPates(bolognaise)
+// faisDesPates(bolognaise)
 
 
 
