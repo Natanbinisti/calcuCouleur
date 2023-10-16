@@ -107,4 +107,37 @@ function faisDesPates(sauce){
 //en soi, dans un code couleur,
 //il y a un #
 //et ensuite 6 caracteres parmis ceux-la
-let caracteresPossibles = "abcdef0123456789"
+
+const monBouton = document.querySelector('.monBouton')
+
+monBouton.addEventListener('click', ()=>{
+  changeColor()
+})
+
+for( let i = 0   ; i <= 4  ; i++   )
+{
+   // console.log("coucou")
+    console.log(i)
+
+}
+
+
+
+
+function changeColor(){
+    console.log('clic clic')
+    // une couleur d'exemple : let couleur = '#4JFO50'
+    let color = ""
+    let caracteresPossibles = "abcdedf1234567890";
+
+    //
+
+
+    // on veut obtenir une variable color
+    //qui contient une couleur au hasard
+    // recuperer mon element cercle dans une constante
+    // -->   cercle.style.backgroundColor = color
+
+
+}
+
