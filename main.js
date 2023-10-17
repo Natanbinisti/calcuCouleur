@@ -108,11 +108,6 @@ function faisDesPates(sauce){
 //il y a un #
 //et ensuite 6 caracteres parmis ceux-la
 
-const monBouton = document.querySelector('.monBouton')
-
-monBouton.addEventListener('click', ()=>{
-  changeColor()
-})
 
 for( let i = 0   ; i <= 4  ; i++   )
 {
@@ -123,27 +118,54 @@ for( let i = 0   ; i <= 4  ; i++   )
 
 
 
+const monBouton = document.querySelector('.monBouton')
+const cercle = document.querySelector('.cercle')
+monBouton.addEventListener('click', ()=>{
+    changeColor()
+})
 
 function changeColor(){
     console.log('clic clic')
     // une couleur d'exemple : let couleur = '#4JFO50'
     let color = ""
-    let caracteresPossibles = "abcdedf1234567890";
-    let nombreDeCaracteresTotal = caracteresPossibles.length
+    color +='#'
 
-    let nombreDecimalAuHasardEntreZeroEtUn = Math.random()
- let nombreDecimalAuHasardEntreZeroEtSeize = nombreDecimalAuHasardEntreZeroEtUn*nombreDeCaracteresTotal
-  let nombreEntierAuHasardEntreZeroEtSeize = Math.floor(nombreDecimalAuHasardEntreZeroEtSeize)
-    console.log(nombreEntierAuHasardEntreZeroEtSeize)
 
-    console.log(caracteresPossibles[nombreEntierAuHasardEntreZeroEtSeize])
 
-                                                 
-    //
-    // on veut obtenir une variable color
-    //qui contient une couleur au hasard
-    // recuperer mon element cercle dans une constante
-    // -->   cercle.style.backgroundColor = color
+                for(let i = 0; i <6; i++ ){
+                    let caracteresPossibles = "abcdedf1234567890";
+                    let nombreDeCaracteresTotal = caracteresPossibles.length
+
+                    let nombreDecimalAuHasardEntreZeroEtUn = Math.random()
+                    let nombreDecimalAuHasardEntreZeroEtSeize = nombreDecimalAuHasardEntreZeroEtUn*nombreDeCaracteresTotal
+                     let nombreEntierAuHasardEntreZeroEtSeize = Math.floor(nombreDecimalAuHasardEntreZeroEtSeize)
+                    console.log(nombreEntierAuHasardEntreZeroEtSeize)
+
+                    console.log(caracteresPossibles[nombreEntierAuHasardEntreZeroEtSeize])
+                    color+=   caracteresPossibles[nombreEntierAuHasardEntreZeroEtSeize]
+
+                    }
+
+                //    let chars = "abcdedf1234567890"
+                 //   let color = "#"
+                //     for(let i = 0; i < 6; i++ ){
+                //            color+=chars[Math.floor(Math.random()*chars.length)]
+                  //   }
+
+        console.log(color)
+    cercle.style.backgroundColor = color
+
+   // le cercle prend un hauteur au hasard entre 30 et 300px
+   // le cercle prend un largeur au hasard entre 30 et 300px
+   // le cercle prend un border-radius au hasard entre 10 et 50%
+
+
+    let height = 100/3
+
+    cercle.style.height = height +'px'
+    cercle.style.width = '500px'
+    cercle.style.borderRadius = "10%"
+
 
 
 }
